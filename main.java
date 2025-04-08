@@ -23,7 +23,7 @@ public class main {
         biblioteca.add(livro3);
 
 
-        System.out.println("Seja Bem Vindo! Deseja ver nosso catalogo de livros?");
+        System.out.println("Seja Bem Vindo! Deseja ver nosso catalogo de livros? (sim/nao)");
         String input = new Scanner(System.in).nextLine();
         String inputFormatado = input.toUpperCase();
 
@@ -49,10 +49,11 @@ public class main {
                 }
                 if (livroescolhido != null && livroescolhido.isDisponivel()) {
                     System.out.println("Muito bem senhor(a) " + nome + "!\nLivro emprestado: " + livroescolhido.getTitulo());
+                    System.out.println();
 
                     livroescolhido.setDisponivel(false);
 
-                    System.out.println("Deseja pegar outro livro tambem?");
+                    System.out.println("Deseja pegar outro livro tambem?(sim/nao)");
                     String input2 = new Scanner(System.in).nextLine();
 
                     if (input2.toUpperCase().equals("NAO")){
